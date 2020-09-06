@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html ng-app>
+    <head>
+        <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.2/angular.min.js"></script>
+        <meta charset="utf-8">
+        <title>Angular.JS</title>
+    </head>
+
+    <body>
+        <script src="angular.min.js"></script>
+        <div>
+            <table align="center">
+                <tbody>
+                    <tr>
+                        <td><h2>Стоимость поездки</h2></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2"><b>Расстояние</b</td>
+                    </tr>
+                    <tr>
+                        <td><input ng-model="a1"></td>
+                        <td>км.</td>
+                    </tr>
+                    <tr>
+                        <td colspan="2"><b>Средний расход топлива</b></td>
+                    </tr>
+                    <tr>
+                        <td><input ng-model="a2"></td>
+                        <td>л./100 км.</td>
+                    </tr>
+                    <tr>
+                        <td colspan="2"><b>Стоимость 1 л. топлива</b></td>
+                    </tr>
+                    <tr>
+                        <td><input ng-model="a3"></td>
+                        <td>грн/литр</td>
+                    </tr>
+                    <tr height="50px"></tr>
+                    <tr>
+                        <td colspan="2"><b>Необходимое количество топлива</b></td>
+                    </tr>
+                    <tr>
+                        <td>{{ b = a1 / 100 * a2 }}</td>
+                        <td>л.</td>
+                    </tr>
+                    <tr>
+                        <td colspan="2"><b>Стоимость поездки</b></td>
+                    </tr>
+                    <tr>
+                        <td>{{ c = b *  a3 }}</td>
+                        <td>грн.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </body>
+</html>
